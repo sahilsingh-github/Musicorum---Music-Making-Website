@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Enter OTP</title>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/otp.css">
+</head>
+<body>
+	
+		
+        <div class="container">
+            <div class="row">
+            <div class="col-5" >
+			<div class="wrap-login100">
+                <br>
+                <span class="login100-form-title p-b-34 p-t-27">
+                    Enter OTP
+                </span>
+                <br><br><br>
+			
+                    <form action="/otp" method="POST" class="otp" autocomplete="off" novalidate>
+                        <fieldset>
+                          <input type="text" name="n1" maxlength="1"/>
+                          <input type="text" name="n2" maxlength="1"/>
+                          <input type="text" name="n3" maxlength="1"/>
+                          <input type="text" name="n4" maxlength="1"/>
+                          <input type="text" name="n5" maxlength="1"/>
+                          <input type="text" name="n6" maxlength="1"/>
+                          <input name= "abcd" value="<%=otp%>" hidden><br>
+                          <button class="login100-form-btn">Submit</button>
+                        </fieldset>
+                      </form>
+                      <br>
+                      <br>
+                      <br>
+                      <br>
+                      <br>
+					
+					<div class="contact100-form-checkbox">
+						
+							<a class="txt1" href="#">
+								Resend OTP
+							</a>
+						</label>
+                    </div>
+                    <br>
+                    
+					
+					<br><br>
+					<div>
+						<a href="/" class="text-2">Back to Home Page</a>
+					</div>
+				</form>
+            </div>
+        </div>
+        <div class="col-7" id="login-bg">
+        </div>
+    </div>
+        </div>
+        
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script>
+        
+        $( '.clickHere' ).on("click", function(){
+          $('#button').click();
+        });
+        
+        $('#secondDiv').insertBefore('#firstDiv');
+        
+        $('.otp input').on('keyup change', function(){
+          $t = $(this);
+          if ($t.val().length > 0) {
+            $t.next().focus();
+          }
+        });
+         
+            </script>
+	
+</body>
+</html>

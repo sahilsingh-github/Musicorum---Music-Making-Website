@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Login Page</title>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="../fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="../fonts/iconic/css/material-design-iconic-font.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/Login.css">
+</head>
+<body>
+	<% if (messages) { %>
+		
+	<p style="font-size: 40px; font-weight: 600; color: rgb(255, 194, 81);"><%= messages %></p>
+	<% } %>	
+	<!-- <div class="container-login100" style="background-image: url('Images/login.jpeg');"> -->
+        <div class="container">
+            <div class="row">
+            <div class="col-5" >
+			<div class="wrap-login100">
+				<form class="login100-form validate-form" action="/login"method="POST">
+					<div class="logo">
+						<!-- <img src="Images/architecture.png" alt="" id="logo"> -->
+					</div>
+					<br>
+					<span class="login100-form-title p-b-34 p-t-27">
+						Login
+					</span>
+					<br><br><br>
+					<div class="wrap-input100 validate-input" data-validate = "Enter email">
+						<input class="input100" type="email" name="email" placeholder="Email">
+						<span class="focus-input100" data-placeholder="&#xf15a;"></span>
+                    </div>
+                    <!-- <div class="wrap-input100 validate-input" data-validate = "Enter username">
+						<input class="input100" type="text" name="login[username]" placeholder="Username">
+						<span class="focus-input100" data-placeholder="&#xf207;"></span>
+					</div> -->
+
+					<div class="wrap-input100 validate-input" data-validate="Enter password">
+						<input class="input100" type="password" name="password" placeholder="Password">
+						<span class="focus-input100" data-placeholder="&#xf191;"></span>
+					</div>
+					
+					<div class="contact100-form-checkbox">
+						<input class="input-checkbox100" id="ckb1" type="checkbox" name="login[remember-me]">
+						<label class="label-checkbox100" for="ckb1">
+							Remember me
+							<a class="txt1" href="#">
+								Forgot Password?
+							</a>
+						</label>
+					</div>
+					<br>
+					<div class="container-login100-form-btn">
+						<!-- <a href="/homepage" class="login100-form-btn">
+							Login
+						</a> -->
+						<button class="login100-form-btn" type="submit">Login</button>
+						
+					</div>
+					<br><br>
+					<div>
+						<a href="/signup" class="text-2">Don't have an account? Sign Up</a>
+					</div>
+				</form>
+            </div>
+        </div>
+        <div class="col-7" id="login-bg">
+        </div>
+    </div>
+		</div>
+	
+</body>
+</html>

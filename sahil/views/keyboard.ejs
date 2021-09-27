@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.7.44/Tone.js"></script>
+    
+
+<style>
+#container{ 
+    position: absolute;
+    height:250px;
+    border:5px solid black;
+    top:calc(50% - 100px);
+    left:calc(50% - 500px);
+    overflow: hidden;
+}
+.whitenote{
+    height:100%;
+    width: 50px;
+    background:white;
+    float: left;
+    border-right: 1px solid black;
+    position:relative;
+}
+.blacknote{
+    position:absolute;
+    height:65%;
+    width:55%;
+    z-index:1;
+    background: #777;
+    left:68%;
+}
+a{
+    color: antiquewhite;
+    text-decoration: none;
+}
+</style>
+
+</head>
+
+<body>
+    
+    <img src="../img/key.jpg">
+   
+
+    <section id="header">
+        <div class="header container">
+          <div class="nav-bar">
+            <div class="brand">
+              <a href="index.html"><h1 style="word-spacing: 330px;"><span>MUSIC</span>ORUM <span>Virtual</span>Piano</h1></a>
+            </div>
+            <div class="nav-list">
+              <div class="hamburger"><div class="bar"></div></div>
+              <ul>
+                <li><a href="/" data-after="Home">Home</a></li>
+                
+              </ul>
+            </div>
+          </div>
+          
+        </div>
+      </section>
+     
+   
+    <script src="../js/home.js"></script>
+
+<div id='container'>
+    
+</div>
+<script>
+    var synth= new Tone.PolySynth().toMaster();
+    var notes=['C','D','E','F','G','A','B'];
+    var html="";
+    
+
+for(var octave = 0; octave < 3; octave++)
+{
+        for (var i=0; i<notes.length; i++){
+            var hasSharp=true;
+            var note= notes[i];
+            
+            if(note == 'E' || note== 'B')
+                hasSharp= false;
+            
+            html +=`<div class='whitenote' onmousedown='noteDown(
+                this, false)' onmouseup='noteUp(this,false)'
+                 onmouseleave='noteUp(this, false)' data-note='${note + (octave + 4)}'>`;
+            
+            if(hasSharp){
+                html +=`<div class='blacknote' onmousedown='noteDown(
+                    this, true)' onmouseup='noteUp(this, true)'
+                     onmouseleave='noteUp(this, true)' data-note='${note + '#' + (octave+4)}
+                    '></div>`;
+            }
+            html +='</div>';
+        }
+
+}     
+    document.getElementById('container').innerHTML=html;
+    function noteUp(elem,isSharp){
+        elem.style.background = isSharp ? '#777' : 'white';
+    }
+    function noteDown(elem,isSharp){
+        var note= elem.dataset.note;
+        //alert(note);
+        elem.style.background = isSharp ? 'black' : '#ccc';
+        synth.triggerAttackRelease(note, "16n"); 
+        event.stopPropagation();
+        }
+
+        
+    </script>
+    
+    </body>
+</html>

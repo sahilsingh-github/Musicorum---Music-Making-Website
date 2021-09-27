@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    
+    <link rel="stylesheet" type="text/css" href="../css/review.css">
+    <title>Review page</title>
+
+  </head>
+  <body>
+   <div id="segment_1">
+      <nav class="navbar navbar-expand-sm navmain fixed-top">
+          <button class="navbar-toggler" data-toggle="collapse" data-target="#toggleMenu">
+              <span class="navbar-toggler-icon" ></span>
+          </button> 
+          <div class="collapse navbar-collapse">
+             <div class="back">
+          <ul class="navbar-nav" id="toggleMenu">
+              <!-- <li class="nav-item">
+                 <img src="Images/architecture.png" alt="" id="logo">   
+              </li> -->
+              
+              <li class="nav-item">
+               <a href="/" id="back-btn"><i class='fas fa-angle-left'></i> </a>
+            </li>
+         </ul>
+      </div>
+            <ul class="navbar-nav" id="toggleMenu">
+              <li class="nav-item">
+                 <p id="title-1">MUSICORUM REVIEWS</p> 
+              </li>
+          </ul>
+      
+          </div>
+      </nav>
+      <br>
+          <div class="segment2">
+            
+               <div class="row">
+                  <div class="col-12">
+                     
+                        <!-- <p id="rev-title" style="font-size: 30px" style="color:rgba(204, 94, 108, 0.667)">Add Your Review</p> -->
+
+                     <br>
+                  </div>
+               </div>
+               <div class="row">
+                  <div class="col-2" >
+                     <!-- <img src="Images/Profile.png" alt="" id="review-logo"> -->
+                  </div>
+                  <div class="col-10" >
+                     <form action="/review" method="POST">
+                        <input type="text" name="comment[username]" id="username" placeholder="Add your username here"><br><br>
+                        <textarea rows="5" cols="70" id="review" name="comment[review]"  placeholder="Add your review here"></textarea>
+                        <br><br>
+                        <!-- <div class="container-login100-form-btn">
+                           <a href="#" class="login100-form-btn">
+                              Submit
+                           </a> -->
+                           <button class="login100-form-btn" id="get-button" >SUBMIT</button>
+                        </div>
+                     </form>
+                  </div>
+               </div>
+               <div class="container">
+               <br><br>
+               <div class="row">
+                  <div class="col-12" >
+                     <div class="border-id2">
+                        <p></p>
+                        
+                     </div>
+                     <p id="rev-title" style="font-size: 33px;">Comments</p>
+                     
+                  </div>
+               </div>
+               
+               <br><br>
+               <div class="row">
+                  <div class="col-2">
+                     <!-- <img src="Images/Profile2.png" alt="" id="comment-logo"> -->
+                  </div>
+                  <div class="col-8">
+                     <p id="com-title">Avanthika Raj</p>
+                     <p id="com-time">18 hours ago</p>
+                     <p id="com-content">Man i started learning Piano 2 weeks back and today i played 
+                        my first ever beginner version of Moonlight Sonata by Beethoven, I love this website, Thankyou MUSICORUM!
+                     </p>
+                     <hr>
+                  </div>
+               </div>
+         <div class="row">
+            <div class="col-2">
+               <img src="Images/Profile2.png" alt="" id="comment-logo">
+            </div>
+            <div class="col-8">
+               <p id="com-title">Nikki Singh</p>
+               <p id="com-time">24 hours ago</p>
+               <p id="com-content">Perfect place to meditate, enjoy music and learn new things, I enjoyed my experience at MUSICORUM</p>
+               <hr>
+            </div>
+         </div>
+         <div class="row">
+            <div class="col-2">
+              <img src="Images/Profile2.png" alt="" id="comment-logo">
+            </div>
+            <div class="col-8" id="log">
+              <p id="com-title">Sucheet Bopanna</p>
+              <p id="com-time">2 days ago</p>
+              <p id="log">I just love this place. Musicorum is fun to roam around and see new things for</p>
+              <hr>
+            </div>
+         </div>
+         <p id="demo"></p>
+
+         <div class="row">
+            <div class="col-2">
+              <img src="Images/Profile2.png" alt="" id="comment-logo">
+            </div>
+            <div class="col-8">
+              <p id="com-title" class="title"></p>
+              <p id="com-time"></p>
+              <p id="com-content" class="content"></p>
+              <hr>
+            </div>
+         </div>
+        
+         </div>
+         
+      </div>
+    </div>
+    <p><span>_</span></p>
+    
+    
+    
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="../js/jquery.js"></script>
+    <script src="../js/script.js"></script>
+   </body>
+</html>
+
+
+

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../css/style.css">  
+    <title>Pay</title>
+  </head>
+   
+    <style>
+      form {
+          width: 500px;
+          margin: 0 auto;
+          background-color:rgb(190, 158, 158);
+          padding: 12px;
+          border-radius : 10px;
+      }
+      ::placeholder { 
+color:white;
+opacity: 1; 
+}
+      input[type=text], input[type=tel], input[type=number] {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+        border: none;
+        text-decoration: none;
+        background-color: darkred;
+        color: white;
+        
+      }
+      button
+      {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+        border: none;
+        background-color: red;
+        color: white;
+      }
+      input[type=password], input[type=radio]{
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+        border: none;
+        background-color:darkred;
+        color: white;
+      }
+      input[type=date] {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+        border: none;
+        background-color:darkred;
+        color : white;
+      }
+  
+      select{
+width: 100%;
+padding: 12px 20px;
+margin: 8px 0;
+box-sizing: border-box;
+border: none;
+background-color:darkred;
+color:white;
+}
+        input:required:invalid
+        {
+           border-color:red;
+           }
+      
+  </style>
+  
+  <body style="background-color:#f5f3ef">
+    <!-- Header -->
+   <section id="header">
+    <div class="header container">
+      <div class="nav-bar">
+        <div class="brand">
+          <a href="#hero"><h1><span>MUSIC</span>ORUM</h1></a>
+        </div>
+        <div class="nav-list">
+          <div class="hamburger"><div class="bar"></div></div>
+          <ul>
+            <li><a href="/" data-after="Home">Home</a></li>
+            <li><a href="/login" data-after="Service">Login</a></li>
+
+            <!-- <li><a href="cart.php" data-after="Cart">Cart</a></li> -->
+            <!-- <li><a href="appointmentform.php" data-after="Appointment">Appointment</a></li> -->
+          </ul>
+        </div>
+      </div>
+    </div>
+  
+    <div class="row my-5">
+      <div class="col-md-4 offset-md-4">
+        <div class="card">
+          <div class="card-body">
+            <form class="" action="/paynow" method="post">
+              <div class="form-group" style="vertical-align: text-bottom;">
+                <label for="">Name: </label>
+                <input class="form-control" type="text" name="name" value="">
+              </div>
+              <div class="form-group">
+                <label for="">Email: </label>
+                <input class="form-control" type="text" name="email" value="">
+              </div>
+              <div class="form-group">
+                <label for="">Phone: </label>
+                <input class="form-control" type="text" name="phone" value="">
+              </div>
+                <div class="form-group">
+                <label for="">Amount: </label>
+                <input class="form-control" type="text" name="amount" value="">
+              </div>
+              <div class="form-group">
+                <button class="btn form-control btn-primary">Pay Now</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
