@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2&family=Poppins&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles/index.css">
+</head>
+<body>
+
+    <main>
+        <header>
+            <div class="title">
+
+                <img src="icons/logo.jpg" alt="logo" width="35px">
+                <h1>
+                    Chat
+                </h1>
+                <button type="button">
+                    <img src="icons/hamburger.png" alt="ham" width="50px">
+                </button>
+
+            </div>
+        </header>
+        <div class="container">
+            <div class="userswindow">
+                <div class="usershead">
+                    <h3>People</h3>
+                    <h4 class="users-count">0</h4>
+                </div>
+                <div class="userslist">
+                    
+                </div>
+            </div>
+            <div class="chat-window">
+                <div class="chats">
+                   
+                </div>
+                <div class="user-input">
+                    <input id="user-msg" type="text" placeholder="Type message...">
+                    <button type="button" id="user-send">SEND</button>
+                </div>
+            </div>
+        </div>
+       
+    </main>
+    <!-- client side script-->
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/client.js"></script>
+</body>
+</html>
